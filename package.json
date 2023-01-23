@@ -1,0 +1,34 @@
+{
+  "name": "@2pulse/responsive",
+  "private": false,
+  "author": "Aurélien RC - @2pulse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "scripts": {
+    "watch": "tsc --watch",
+    "prepublish": "npx rimraf ./dist && tsup src/** --format esm,cjs --dts --legacy-output"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "^0.70",
+    "react-native-web": "^0.18"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-web",
+    "media-query",
+    "responsive"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react-native": "^0.70.7",
+    "react-native-web": "^0.18.10",
+    "rimraf": "^4.1.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3"
+  }
+}
