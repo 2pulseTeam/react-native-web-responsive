@@ -238,13 +238,13 @@ var withResponsive = (Component) => {
       const [pseudoState, setPseudoState] = (0, import_react3.useState)({
         isHovered: false
       });
-      let responsiveStyle = typeof styleAsObjectOrFunc === "function" ? styleAsObjectOrFunc({
+      let responsiveStyleDeclarativeStyle = typeof styleAsObjectOrFunc === "function" ? styleAsObjectOrFunc({
         props,
         theme,
         utils: pseudoState
       }) : styleAsObjectOrFunc;
-      if (isDeclarativeStyle(responsiveStyle)) {
-        responsiveStyle = transformDeclarativeToNativeStyle(responsiveStyle)(width, height, theme);
+      if (isDeclarativeStyle(responsiveStyleDeclarativeStyle)) {
+        responsiveStyleDeclarativeStyle = transformDeclarativeToNativeStyle(responsiveStyleDeclarativeStyle)(width, height, theme);
       }
       const handlePseudoState = (key, value) => {
         return () => {
@@ -254,6 +254,7 @@ var withResponsive = (Component) => {
           }));
         };
       };
+      const { mediaQueries, ...responsiveStyle } = responsiveStyleDeclarativeStyle;
       const styleSheet = import_react_native2.StyleSheet.create({
         mergedStyle: {
           ...responsiveStyle,
