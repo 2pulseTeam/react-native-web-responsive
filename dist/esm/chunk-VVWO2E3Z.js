@@ -1,9 +1,9 @@
 import {
   withResponsive
-} from "./chunk-X5PBS5UV.js";
+} from "./chunk-UKSNE727.js";
 
 // src/components/index.tsx
-import { Text, View, Image, TextInput, TouchableOpacity, ActivityIndicator, Modal, ImageBackground, KeyboardAvoidingView, Switch, TouchableHighlight, SafeAreaView, ScrollView } from "react-native";
+import { Text, View, Image, TextInput, TouchableOpacity, ActivityIndicator, Modal, ImageBackground, KeyboardAvoidingView, Switch, TouchableHighlight, SafeAreaView, ScrollView, FlatList } from "react-native";
 var components_default = {
   View: withResponsive(View),
   Text: withResponsive(Text),
@@ -17,7 +17,8 @@ var components_default = {
   TouchableOpacity: withResponsive(TouchableOpacity),
   ActivityIndicator: withResponsive(ActivityIndicator),
   KeyboardAvoidingView: withResponsive(KeyboardAvoidingView),
-  TouchableHighlight: withResponsive(TouchableHighlight)
+  TouchableHighlight: withResponsive(TouchableHighlight),
+  FlatList: withResponsive(FlatList)
 };
 
 export {

@@ -1,6 +1,6 @@
 import * as react from 'react';
 import { DeclarativeStyle, RNsponsiveFinalTheme, FunctionStyle, ResponsiveComponent } from '../types.js';
-import { ViewStyle, ViewProps, TextStyle, TextProps, ModalProps, ImageStyle, ImageProps, SwitchProps, TextInputProps, ScrollViewProps, ImageBackgroundProps, TouchableOpacityProps, ActivityIndicatorProps, KeyboardAvoidingViewProps, TouchableHighlightProps } from 'react-native';
+import { ViewStyle, ViewProps, TextStyle, TextProps, ModalProps, ImageStyle, ImageProps, SwitchProps, TextInputProps, ScrollViewProps, ImageBackgroundProps, TouchableOpacityProps, ActivityIndicatorProps, KeyboardAvoidingViewProps, TouchableHighlightProps, FlatListProps } from 'react-native';
 
 declare const _default: {
     View: <C>(styleAsObjectOrFunc: DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme> | FunctionStyle<C, DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme>>) => react.ForwardRefExoticComponent<react.PropsWithoutRef<ResponsiveComponent<ViewProps, C>> & react.RefAttributes<react.LegacyRef<unknown>>>;
@@ -16,6 +16,7 @@ declare const _default: {
     ActivityIndicator: <C_9>(styleAsObjectOrFunc: DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme> | FunctionStyle<C_9, DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme>>) => react.ForwardRefExoticComponent<react.PropsWithoutRef<ResponsiveComponent<ActivityIndicatorProps, C_9>> & react.RefAttributes<react.LegacyRef<unknown>>>;
     KeyboardAvoidingView: <C_10>(styleAsObjectOrFunc: DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme> | FunctionStyle<C_10, DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme>>) => react.ForwardRefExoticComponent<react.PropsWithoutRef<ResponsiveComponent<KeyboardAvoidingViewProps, C_10>> & react.RefAttributes<react.LegacyRef<unknown>>>;
     TouchableHighlight: <C_11>(styleAsObjectOrFunc: DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme> | FunctionStyle<C_11, DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme>>) => react.ForwardRefExoticComponent<react.PropsWithoutRef<ResponsiveComponent<TouchableHighlightProps, C_11>> & react.RefAttributes<react.LegacyRef<unknown>>>;
+    FlatList: <C_12>(styleAsObjectOrFunc: DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme> | FunctionStyle<C_12, DeclarativeStyle<ViewStyle, RNsponsiveFinalTheme>>) => react.ForwardRefExoticComponent<react.PropsWithoutRef<ResponsiveComponent<FlatListProps<any>, C_12>> & react.RefAttributes<react.LegacyRef<unknown>>>;
 };
 
 export { _default as default };

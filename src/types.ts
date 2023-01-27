@@ -27,7 +27,7 @@ export type DeclarativeStyle<S extends NativeStyle, T extends BaseTheme = RNspon
 
 export type ResponsiveComponent<P, C> = {
   children?: Children;
-  _style?: NativeStyle;
+  extraStyle?: NativeStyle;
 } & P &
   C;
 

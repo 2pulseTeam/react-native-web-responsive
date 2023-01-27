@@ -225,13 +225,13 @@ var withResponsive = (Component) => {
       const [pseudoState, setPseudoState] = (0, import_react3.useState)({
         isHovered: false
       });
-      let responsiveStyleDeclarativeStyle = typeof styleAsObjectOrFunc === "function" ? styleAsObjectOrFunc({
+      let responsiveDeclarativeStyle = typeof styleAsObjectOrFunc === "function" ? styleAsObjectOrFunc({
         props,
         theme,
         utils: pseudoState
       }) : styleAsObjectOrFunc;
-      if (isDeclarativeStyle(responsiveStyleDeclarativeStyle)) {
-        responsiveStyleDeclarativeStyle = transformDeclarativeToNativeStyle(responsiveStyleDeclarativeStyle)(width, height, theme);
+      if (isDeclarativeStyle(responsiveDeclarativeStyle)) {
+        responsiveDeclarativeStyle = transformDeclarativeToNativeStyle(responsiveDeclarativeStyle)(width, height, theme);
       }
       const handlePseudoState = (key, value) => {
         return () => {
@@ -241,11 +241,11 @@ var withResponsive = (Component) => {
           }));
         };
       };
-      const { mediaQueries, ...responsiveStyle } = responsiveStyleDeclarativeStyle;
+      const { mediaQueries, ...responsiveStyle } = responsiveDeclarativeStyle;
       const styleSheet = import_react_native2.StyleSheet.create({
         mergedStyle: {
           ...responsiveStyle,
-          ...props._style ?? {}
+          ...props.extraStyle ?? {}
         }
       });
       return <Hoverable onHoverIn={handlePseudoState("isHovered", true)} onHoverOut={handlePseudoState("isHovered", false)}><Component style={styleSheet.mergedStyle} ref={ref} {...props}>{children}</Component></Hoverable>;

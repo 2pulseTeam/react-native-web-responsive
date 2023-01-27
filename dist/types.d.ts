@@ -18,7 +18,7 @@ type DeclarativeStyle<S extends NativeStyle, T extends BaseTheme = RNsponsiveFin
 } & S;
 type ResponsiveComponent<P, C> = {
     children?: Children;
-    _style?: NativeStyle;
+    extraStyle?: NativeStyle;
 } & P & C;
 type MediaQuery = {
     platforms?: Platform[];

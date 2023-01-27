@@ -17,7 +17,7 @@ export const withResponsive = <S extends NativeStyle, P extends ViewProps>(Compo
         isHovered: false,
       });
 
-      let responsiveStyleDeclarativeStyle =
+      let responsiveDeclarativeStyle =
         typeof styleAsObjectOrFunc === 'function'
           ? styleAsObjectOrFunc({
               props: props as C,
@@ -26,8 +26,8 @@ export const withResponsive = <S extends NativeStyle, P extends ViewProps>(Compo
             })
           : styleAsObjectOrFunc;
 
-      if (isDeclarativeStyle(responsiveStyleDeclarativeStyle)) {
-        responsiveStyleDeclarativeStyle = transformDeclarativeToNativeStyle(responsiveStyleDeclarativeStyle)(width, height, theme);
+      if (isDeclarativeStyle(responsiveDeclarativeStyle)) {
+        responsiveDeclarativeStyle = transformDeclarativeToNativeStyle(responsiveDeclarativeStyle)(width, height, theme);
       }
 
       const handlePseudoState = (key: keyof PseudoState, value: boolean) => {
@@ -39,12 +39,12 @@ export const withResponsive = <S extends NativeStyle, P extends ViewProps>(Compo
         };
       };
 
-      const {mediaQueries, ...responsiveStyle} = responsiveStyleDeclarativeStyle;
+      const {mediaQueries, ...responsiveStyle} = responsiveDeclarativeStyle;
 
       const styleSheet = StyleSheet.create({
         mergedStyle: {
           ...responsiveStyle,
-          ...(props._style ?? {}),
+          ...(props.extraStyle ?? {}),
         },
       });
 
