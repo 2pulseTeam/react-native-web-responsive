@@ -281,6 +281,7 @@ var components_default = {
   ActivityIndicator: withResponsive(import_react_native3.ActivityIndicator),
   KeyboardAvoidingView: withResponsive(import_react_native3.KeyboardAvoidingView),
   TouchableHighlight: withResponsive(import_react_native3.TouchableHighlight),
+  Pressable: withResponsive(import_react_native3.Pressable),
   FlatList: withResponsive(import_react_native3.FlatList)
 };
 

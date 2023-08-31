@@ -3,7 +3,7 @@ import {
 } from "./chunk-UKSNE727.js";
 
 // src/components/index.tsx
-import { Text, View, Image, TextInput, TouchableOpacity, ActivityIndicator, Modal, ImageBackground, KeyboardAvoidingView, Switch, TouchableHighlight, SafeAreaView, ScrollView, FlatList } from "react-native";
+import { Pressable, Text, View, Image, TextInput, TouchableOpacity, ActivityIndicator, Modal, ImageBackground, KeyboardAvoidingView, Switch, TouchableHighlight, SafeAreaView, ScrollView, FlatList } from "react-native";
 var components_default = {
   View: withResponsive(View),
   Text: withResponsive(Text),
@@ -18,6 +18,7 @@ var components_default = {
   ActivityIndicator: withResponsive(ActivityIndicator),
   KeyboardAvoidingView: withResponsive(KeyboardAvoidingView),
   TouchableHighlight: withResponsive(TouchableHighlight),
+  Pressable: withResponsive(Pressable),
   FlatList: withResponsive(FlatList)
 };
 
